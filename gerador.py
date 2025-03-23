@@ -1,8 +1,9 @@
 from secrets import *
 from string import *
+from time import sleep
 
 while True:
-    print('''[1]PIN \n[2]LETRAS \n[3]CARACTERES ESPECIAIS \n[4] TODOS''')
+    print('''[1]PIN \n[2]LETRAS \n[3]CARACTERES ESPECIAIS \n[4]TODOS \n[5]SAIR''')
     
     tipo_de_senha= int(input('TIPO DE SENHA: '))
 
@@ -41,10 +42,18 @@ while True:
         tamanho04 = int(input('TAMANHO: '))
         while tamanho04 <=0:
             print('DIGITE UM VALOR VÁLIDO')
-            tamanho03 = int(input('TAMANHO: '))
+            tamanho04 = int(input('TAMANHO: '))
         senha04_resultado = ''.join(choice(senha04) for c in range(tamanho04))
         print(senha04_resultado)
         break
 
+    elif tipo_de_senha == 5:
+        print('SAINDO...')
+        sleep(1.5)
+        break
+    
     else:
         print('ERRO: DIGITE UM VALOR ENTRE 1 E 4')
+
+
+
